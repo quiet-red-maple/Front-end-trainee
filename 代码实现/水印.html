@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="watermark">
+      <p>This is a watermark</p>
+    </div>
+
+    <style>
+      .watermark {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* 防止水印干扰用户交互 */
+      }
+
+      .watermark p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        opacity: 0.5;
+        color: #ccc;
+        pointer-events: none; /* 防止水印干扰用户交互 */
+      }
+    </style> -->
+    <canvas id="watermarkCanvas"></canvas>
+
+    <script>
+      const canvas = document.getElementById("watermarkCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = 400; // 设置画布宽度
+      canvas.height = 300; // 设置画布高度
+
+      ctx.font = "24px Arial"; // 设置字体样式
+      ctx.fillStyle = "rgba(255, 0, 0, 0.5)"; // 设置字体颜色和透明度
+      ctx.rotate(-Math.PI / 4); // 设置旋转角度
+      ctx.fillText("This is a watermark", 50, 200); // 绘制水印文本
+    </script>
+  </body>
+</html>
