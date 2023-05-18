@@ -1,6 +1,6 @@
 // 实现一个通用First<T>，它接受一个数组T并返回它的第一个元素的类型。
 namespace FirstModule {
-  // type First<T extends any[]> = T extends [infer F, ...infer _] ? F : never;
+  // type First<T extends any[]> = T extends [infer A, ...infer _] ? A : never;
   type First<T extends any[]> = T["length"] extends 0 ? never : T[0];
 
   type arr1 = ["a", "b", "c"];

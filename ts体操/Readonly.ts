@@ -1,8 +1,8 @@
 // 不可再对新对象的属性进行赋值
 namespace MyReadonlyModule {
-  type MyReadonly<T> = {
-    readonly [P in keyof T]: T[P];
-  };
+ type MyReadonly<T> = {
+   readonly [P in keyof T]: T[P];
+ };
   interface Todo {
     title: string;
     description: string;
