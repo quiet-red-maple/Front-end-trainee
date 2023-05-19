@@ -5,6 +5,7 @@ namespace ParametersModule {
     ? P
     : never;
   const foo = (arg1: string, arg2: number): void => {};
+  type DefaultFunctionParamsType = Parameters<typeof foo>;
   // [arg1: string, arg2: number]
   type FunctionParamsType = MyParameters<typeof foo>;
 }

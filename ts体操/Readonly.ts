@@ -8,6 +8,11 @@ namespace MyReadonlyModule {
     description: string;
   }
 
+  const defaultTodo: Readonly<Todo> = {
+    title: "Hey",
+    description: "foobar",
+  };
+
   const todo: MyReadonly<Todo> = {
     title: "Hey",
     description: "foobar",

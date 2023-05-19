@@ -11,6 +11,7 @@ namespace PickModule {
     completed: boolean;
   }
 
+  type DefaultTodoPreview = Pick<Todo, "title" | "completed">;
   type TodoPreview = MyPick<Todo, "title" | "completed">;
 
   const todo: TodoPreview = {
